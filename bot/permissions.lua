@@ -13,9 +13,10 @@ local sudos = {
  	"ungban",
  	"setrules",
  	"setphoto",
+ 	"creategroup",
  	"setname",
  	"addbots",
- 	"newlink",
+ 	"setlink",
  	"rank_guest",
  	"description",
  	"export_gban"
@@ -26,21 +27,21 @@ local mods = {
 	"add",
 	"ban",
 	"unban",
-	"link",
 	"lockmember",
 	"mute",
 	"unmute",
 	"admins",
  	"members",
-	"rules",
- 	"pre_process" 	
-        "mods",
+ 	"mods",
 	"flood",
 	"commands",
 	"lang",
 	"settings",
 	"mod_commands",
-	"no_flood_ban"
+	"no_flood_ban",
+	"muteall",
+	"rules",
+	"pre_process"
 }
 
 local function get_tag(plugin_tag)
