@@ -32,7 +32,9 @@ local mods = {
 	"unmute",
 	"admins",
  	"members",
- 	"mods",
+	"rules",
+ 	"pre_process" 	
+        "mods",
 	"flood",
 	"commands",
 	"lang",
