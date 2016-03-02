@@ -151,11 +151,11 @@ end
 
 return {
   patterns = {
-    "^#(whois)$",
-    "^#id$",
-    "^#ids? (chat)$",
-    "^#ids? (channel)$",
-    "^#(whois) (.*)$"
+    "^[!/@$&#](whois)$",
+    "^[!/@$&#][Ii]d$",
+    "^[!/@$&#][Ii]ds? (chat)$",
+    "^[!/@$&#][Ii]ds? (channel)$",
+    "^[!/@$&#](whois) (.*)$"
   },
   run = run
 }
