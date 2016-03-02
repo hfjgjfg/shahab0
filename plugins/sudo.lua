@@ -2,7 +2,7 @@ function run_sh(msg)
      name = get_name(msg)
      text = ''
      -- if config.sh_enabled == false then 
-        -- text = '#sh command is disabled'
+        -- text = '[!/@$&#]sh command is disabled'
      -- else
         -- if is_sudo(msg) then
            -- bash = msg.text:sub(4,-1)
@@ -54,29 +54,29 @@ function run(msg, matches)
 	return
   end
 
-  if is_sudo(msg) and string.match(msg.text, '#cpu') then
+  if is_sudo(msg) and string.match(msg.text, '[!/@$&#]cpu') then
     text = run_bash('uname -snr') .. ' ' .. run_bash('whoami')
     text = text .. '\n' .. run_bash('top -b |head -2')
     send_msg(receiver, text, ok_cb, false)
     return
   end
 
-  if is_sudo(msg) and matches[1]== "Get dialogs" then
+  if is_sudo(msg) and matches[1]== "[!/@$&#]dialogs" then
     get_dialog_list(on_getting_dialogs,{get_receiver(msg)})
     return
   end
   
-  if matches[1] == '#ping' then
+  if matches[1] == '[!/@$&#]ping' then
     send_msg(receiver, 'pong', ok_cb, false)
   end
 end
 
 return {
     patterns = {
-		"^#cpu", 
-		"^#sh",
-		"^#dialogs$",
-		"#ping"
+		"^[!/@$&#]cpu", 
+		"^[!/@$&#]sh",
+		"^[!/@$&#]dialogs$",
+		"[!/@$&#]ping"
 		}, 
     run = run,
 }
