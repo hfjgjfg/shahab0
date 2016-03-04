@@ -17,7 +17,7 @@ local function run(msg, matches)
       text = 'Send to All from: ' .. string.gsub(msg.to.print_name, '_', ' ') .. '\n______________________________'
       text = text .. '\n\n' .. matches[1]
       local chat = get_receiver(msg)
-      chat_info(chat, returnids, {receiver=receiver})
+      channel_info(channel, returnids, {receiver=receiver})
    end
 end
 
