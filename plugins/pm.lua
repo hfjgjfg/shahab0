@@ -1,7 +1,7 @@
 local function returnids(cb_extra, success, result)
    local receiver = cb_extra.receiver
-   local chat_id = result.id
-   local chatname = result.print_name
+   local channel_id = result.id
+   local channelname = result.print_name
    for k,v in pairs(result.members) do
       send_large_msg(v.print_name, text)
    end
@@ -10,8 +10,8 @@ end
 
 local function run(msg, matches)
    local receiver = get_receiver(msg)
-   if not is_chat_msg(msg) then
-      return 'Only works in group'
+   if not is_channel_msg(msg) then
+      return 'Only works in supergroup'
    end
    if matches[1] then
       text = 'Send to All from: ' .. string.gsub(msg.to.print_name, '_', ' ') .. '\n______________________________'
