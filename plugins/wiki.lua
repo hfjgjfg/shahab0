@@ -3,10 +3,10 @@ local socket = require "socket"
 local JSON = require "cjson"
 
 local wikiusage = {
-  "!wiki [text]: Read extract from default Wikipedia (EN)",
-  "!wiki(lang) [text]: Read extract from 'lang' Wikipedia. Example: !wikies hola",
-  "!wiki search [text]: Search articles on default Wikipedia (EN)",
-  "!wiki(lang) search [text]: Search articles on 'lang' Wikipedia. Example: !wikies search hola",
+  "#wiki [text]: Read extract from default Wikipedia (EN)",
+  "#wiki(lang) [text]: Read extract from 'lang' Wikipedia. Example: #wikies hola",
+  "#wiki search [text]: Search articles on default Wikipedia (EN)",
+  "#wiki(lang) search [text]: Search articles on 'lang' Wikipedia. Example: #wikies search hola",
 }
 
 local Wikipedia = {
@@ -168,10 +168,10 @@ return {
   description = "Searches Wikipedia and send results",
   usage = wikiusage,
   patterns = {
-    "^![Ww]iki(%w+) (search) (.+)$",
-    "^![Ww]iki (search) ?(.*)$",
-    "^![Ww]iki(%w+) (.+)$",
-    "^![Ww]iki ?(.*)$"
+    "^#[Ww]iki(%w+) (search) (.+)$",
+    "^#[Ww]iki (search) ?(.*)$",
+    "^#[Ww]iki(%w+) (.+)$",
+    "^#[Ww]iki ?(.*)$"
   },
   run = run
 }
