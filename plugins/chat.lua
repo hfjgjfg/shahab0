@@ -17,19 +17,19 @@ end
 if msg.text == "salam" then
 	return "va aleykol asalam"
 end
-if msg.text == "Samir" then
+if msg.text == "Shahab" then
 	return "با باباییم چیکار داری"
 end
-if msg.text == "samir" then
+if msg.text == "shahab" then
 	return "با باباییم چیکار داری"
 end
-if msg.text == "SAMIR" then
+if msg.text == "SHAHAB" then
 	return "با باباییم چیکار داری"
 end
-if msg.text == "Tym" then
+if msg.text == "Tfb" then
 	return "Yes?"
 end
-if msg.text == "tym" then
+if msg.text == "tfb" then
 	return "What?"
 end
 if msg.text == "bot" then
@@ -55,10 +55,10 @@ return {
 	patterns = {
 		"^[Hh]i$",
 		"^[Hh]ello$",
-		"^[Ss]amir$",
-		"^SAMIR$",
+		"^[Ss]hahab$",
+		"^SHAHAB$",
 		"^[Bb]ot$",
-		"^[Tt]ym$",
+		"^[Tt]tfb$",
 		"^[Bb]ye$",
 		"^?$",
 		"^[Ss]alam$",
