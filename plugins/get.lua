@@ -28,7 +28,7 @@ local function get_value(msg, var_name)
   if hash then
     local value = redis:hget(hash, var_name)
     if not value then
-      return'Not found, use "!get" to list variables'
+      return'Not found, use "#get" to list variables'
     else
       return var_name..' => '..value
     end
