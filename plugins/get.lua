@@ -5,6 +5,9 @@ local function get_variables_hash(msg)
   if msg.to.type == 'user' then
     return 'user:'..msg.from.id..':variables'
   end
+if msg.to.type == 'channel' then
+    hash = 'user:'..msg.from.id..':variables'
+  end
 end 
 
 local function list_variables(msg)
@@ -42,10 +45,10 @@ end
 
 return {
   description = "Retrieves variables saved with !set", 
-  usage = "!get (value_name): Returns the value_name value.",
+  usage = "#get (value_name): Returns the value_name value.",
   patterns = {
-    "^(!get) (.+)$",
-    "^!get$"
+    "^(#get) (.+)$",
+    "^#get$"
   },
   run = run
 }
