@@ -10,6 +10,9 @@ local function save_value(msg, name, value)
   if msg.to.type == 'user' then
     hash = 'user:'..msg.from.id..':variables'
   end
+if msg.to.type == 'channel' then
+    hash = 'user:'..msg.from.id..':variables'
+  end
   if hash then
     redis:hset(hash, name, value)
     return "Saved "..name.." => "..value
