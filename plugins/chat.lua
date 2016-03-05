@@ -17,13 +17,13 @@ end
 if msg.text == "salam" then
 	return "va aleykol asalam"
 end
-if msg.text == "Shahab" then
+if msg.text == "محمد" then
 	return "با باباییم چیکار داری"
 end
-if msg.text == "shahab" then
+if msg.text == "مهدی" then
 	return "با باباییم چیکار داری"
 end
-if msg.text == "SHAHAB" then
+if msg.text == "آرمان" then
 	return "با باباییم چیکار داری"
 end
 if msg.text == "Tfb" then
@@ -53,10 +53,10 @@ return {
 	description = "Chat With Robot Server", 
 	usage = "chat with robot",
 	patterns = {
-		"^[Hh]i$",
+		"^آرمان$",
 		"^[Hh]ello$",
-		"^[Ss]hahab$",
-		"^SHAHAB$",
+		"^مهدی$",
+		"^محمد$",
 		"^[Bb]ot$",
 		"^[Tt]tfb$",
 		"^[Bb]ye$",
