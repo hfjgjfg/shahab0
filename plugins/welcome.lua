@@ -91,7 +91,7 @@ local function run(msg, matches)
        return 'bye  '..bye_name
    end
 end
---create by RoyalTeam ID CHANNEL : @RoyalTeamCh
+--create by RoyalTeam ID CHANNEL : @mohammad20162015
 return {
    description = "Welcoming Message",
    usage = "send message to new member",
