@@ -9,7 +9,7 @@ local chat = 'channel#id'..msg.to.id
         return 'Description has been set to\n\nSelect the chat again to see the changes'
     end
 end
---create by RoyalTeam ID CHANNEL : @RoyalTeamCh
+--create by RoyalTeam ID CHANNEL : @mohammad20162015
   return {
     patterns = {
       "^#(setabout) (.+)$",
